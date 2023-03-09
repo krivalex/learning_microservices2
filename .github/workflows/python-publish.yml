@@ -7,9 +7,9 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -33,7 +33,7 @@ jobs:
     - name: exec ssh
       uses: appleboy/ssh-action@master
       with: 
-        host: 138.68.90.184
+        host: 64.225.98.152
         username: root
         password: ${{secrets.MY_SECRET_NAME}}
         port: 22
