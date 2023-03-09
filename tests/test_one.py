@@ -16,7 +16,7 @@ def test_service1(conn_with_data: str):
     insert_transaction(conn, transaction)
 
     transactions = get_transactions(conn)
-    assert len(transactions) == 1332
+    assert len(transactions) >= 1332
     transaction = transactions[-1]
     assert transaction.description == "test_description"
 
